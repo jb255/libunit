@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   06_plus_test.c                                     :+:      :+:    :+:   */
+/*   01_basic_alpha_test.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmilon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/26 13:32:11 by tmilon            #+#    #+#             */
-/*   Updated: 2017/11/26 17:29:15 by tmilon           ###   ########.fr       */
+/*   Created: 2017/11/26 16:07:15 by tmilon            #+#    #+#             */
+/*   Updated: 2017/11/26 16:23:52 by tmilon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_proto.h"
+#include "../../framework/test_proto.h"
 
-int	giant_number_test(void)
+int	basic_itoa_test(void)
 {
-	if (ft_atoi("99999999999999999999999999") == -1)
+	if (ft_strcmp(ft_itoa(42), "42") == 0)
 		return (0);
 	else
 		return (-1);

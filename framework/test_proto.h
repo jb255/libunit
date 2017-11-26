@@ -6,7 +6,7 @@
 /*   By: tmilon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/25 02:30:54 by tmilon            #+#    #+#             */
-/*   Updated: 2017/11/26 15:36:09 by tmilon           ###   ########.fr       */
+/*   Updated: 2017/11/26 18:13:14 by tmilon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,43 @@ int		advanced_trim_test(void);
 int		no_trim_test(void);
 
 int		blank_trim_test(void);
+
+int		ft_isalpha(int);
+
+int		isalpha_launcher(void);
+
+int		basic_alpha_test(void);
+
+int		negative_alpha_test(void);
+
+int		high_alpha_test(void);
+
+char	*ft_itoa(int n);
+
+int		itoa_launcher(void);
+
+int		basic_itoa_test(void);
+
+int		neg_itoa_test(void);
+
+int		max_itoa_test(void);
+
+int		min_itoa_test(void);
+
+char	*ft_strjoin(char const *s1, char const *s2);
+
+int		strjoin_launcher(void);
+
+int		join_basic_test(void);
+
+int		join_second_empty_test(void);
+
+int		join_first_empty_test(void);
+
+int		join_both_empty_test(void);
+
+int		double_join_test(void);
+
+int		space_double_join_test(void);
 
 #endif

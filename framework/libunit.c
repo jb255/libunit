@@ -6,7 +6,7 @@
 /*   By: tmilon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/24 20:14:23 by tmilon            #+#    #+#             */
-/*   Updated: 2017/11/26 14:55:51 by tmilon           ###   ########.fr       */
+/*   Updated: 2017/11/26 18:26:58 by tmilon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@ int	handle_signal(int status)
 			ft_putstr(": \e[1;31m[BUSE]\e[1;0m\n");
 		else if (WTERMSIG(status) == 11)
 			ft_putstr(": \e[1;31m[SEGV]\e[1;0m\n");
+		else if (WTERMSIG(status) == 9)
+			ft_putstr(": \e[1;31mProgram was killed\e[1;0m\n");
+		else if (WTERMSIG(status) == )
+			ft_putstr(": \e[1;31mProgram was killed\e[1;0m\n");
 		else
 			ft_putstr(": Something went very wrong\n");
 	}

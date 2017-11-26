@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   06_plus_test.c                                     :+:      :+:    :+:   */
+/*   01_join_basic_test.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmilon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/26 13:32:11 by tmilon            #+#    #+#             */
-/*   Updated: 2017/11/26 17:29:15 by tmilon           ###   ########.fr       */
+/*   Created: 2017/11/26 18:00:37 by tmilon            #+#    #+#             */
+/*   Updated: 2017/11/26 18:07:00 by tmilon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_proto.h"
+#include "../../framework/test_proto.h"
 
-int	giant_number_test(void)
+int	join_basic_test(void)
 {
-	if (ft_atoi("99999999999999999999999999") == -1)
+	if (ft_strcmp(ft_strjoin("Join ", "me"), "Join me") == 0)
 		return (0);
 	else
 		return (-1);

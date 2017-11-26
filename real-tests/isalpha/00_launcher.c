@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   06_plus_test.c                                     :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmilon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/26 13:32:11 by tmilon            #+#    #+#             */
-/*   Updated: 2017/11/26 17:29:15 by tmilon           ###   ########.fr       */
+/*   Created: 2017/11/25 10:33:33 by tmilon            #+#    #+#             */
+/*   Updated: 2017/11/26 17:40:21 by tmilon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libunit.h"
 #include "test_proto.h"
+#include <stdlib.h>
+#include <unistd.h>
 
-int	giant_number_test(void)
+int	isalpha_launcher(void)
 {
-	if (ft_atoi("99999999999999999999999999") == -1)
-		return (0);
-	else
-		return (-1);
+	t_test_chain	*testlist;
+
+	testlist = malloc(sizeof(t_test_chain));
+	init(testlist, &basic_alpha_test, "Basic test");
+	initnewlink(testlist, &negative_alpha_test, "Negative int test");
+	initnewlink(testlist, &high_alpha_test, "High int test");
+	return (launch_tests(testlist, "ISALPHA"));
 }

@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   06_plus_test.c                                     :+:      :+:    :+:   */
+/*   05_double_join_test.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmilon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/26 13:32:11 by tmilon            #+#    #+#             */
-/*   Updated: 2017/11/26 17:29:15 by tmilon           ###   ########.fr       */
+/*   Created: 2017/11/26 18:09:32 by tmilon            #+#    #+#             */
+/*   Updated: 2017/11/26 18:11:14 by tmilon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test_proto.h"
+#include "../../framework/test_proto.h"
 
-int	giant_number_test(void)
+int	double_join_test(void)
 {
-	if (ft_atoi("99999999999999999999999999") == -1)
+	if (ft_strcmp(ft_strjoin("Joining ", ft_strjoin("like ", "crazy")),
+				"Joining like crazy") == 0)
 		return (0);
 	else
 		return (-1);
