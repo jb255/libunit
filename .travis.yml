@@ -1,18 +1,24 @@
-language: C
-dist: trusty
-sudo: required
-env:
-      global:
-              - XC32_URL="http://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v1.34-full-install-linux-installer.run"
-                    - XC32_PATH="/opt/microchip/xc32/v1.34/bin"
-                          - XC32_DL="$HOME/xc32.run"
+matrix:
+    include:
+        - os: osx
+          osx_image: xcode8
+          env:
+              - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
 
-      before_install:
-            sudo dpkg --add-architecture i386 && sudo apt-get update
-                  && sudo apt-get install libc6:i386 && wget -O "$XC32_DL" "$XC32_URL"
-                        && chmod +x "$XC32_DL"
-                              && sudo "$XC32_DL" --mode unattended --netservername localhost
-                                    && export PATH="$PATH:$XC32_PATH";
+              - os: osx
+                osx_image: xcode8
+                env:
+                    - MATRIX_EVAL="brew install gcc5 && CC=gcc-5 && CXX=g++-5"
 
-      script:
-            - xc32-gcc -mprocessor=32MX170F256B -I. -o main main.c
+                    - os: osx
+                      osx_image: xcode8
+                      env:
+                          - MATRIX_EVAL="brew install gcc6 && CC=gcc-6 && CXX=g++-6"
+
+                          - os: osx
+                            osx_image: xcode8
+                            env:
+                                - MATRIX_EVAL="brew install gcc && CC=gcc-7 && CXX=g++-7"
+
+                            before_install:
+                                - eval "${MATRIX_EVAL}"
