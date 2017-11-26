@@ -42,8 +42,6 @@ int	handle_signal(int status)
 			ft_putstr(": \e[1;31m[SEGV]\e[1;0m\n");
 		else if (WTERMSIG(status) == 9)
 			ft_putstr(": \e[1;31mProgram was killed\e[1;0m\n");
-		else if (WTERMSIG(status) == )
-			ft_putstr(": \e[1;31mProgram was killed\e[1;0m\n");
 		else
 			ft_putstr(": Something went very wrong\n");
 	}
