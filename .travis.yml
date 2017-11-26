@@ -1,1 +1,17 @@
-language: C
+---
+sudo: false
+language: c
+compiler:
+  - clang
+  - gcc
+
+os:
+  - osx
+
+script:
+  - make real-test
+
+addons:
+  apt:
+    packages:
+- gcc-multilib
